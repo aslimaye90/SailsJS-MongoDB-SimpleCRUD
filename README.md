@@ -1,1 +1,1 @@
-# SailsJS-MongoDB-SimpleCRUD
+# SailsJS-MongoDB - Simple CRUD operations
