@@ -38,7 +38,7 @@ module.exports.routes = {
 
   'post /persons': 'PersonsController.create',
   'get /persons': 'PersonsController.index',
-  'delete /persons': 'PersonsController.delete',
+  'delete /persons/:Pid': 'PersonsController.delete',
   'put /persons': 'PersonsController.update',
   'get /persons/:Pid': 'PersonsController.show',
   'put /persons/:Pid': 'PersonsController.update'

@@ -54,7 +54,7 @@ module.exports = {
           if(err)
             res.send(err);
           else
-            res.send(data);
+            res.json({"updated": req.body.firstName});
         })
       }
     })
@@ -65,12 +65,13 @@ module.exports = {
    * `PersonsController.delete()` - delete a person with the given ID
    */
   delete: function (req, res) {
-    Persons.remove({"id": req.params.Pid}, function(err,data){
+    Persons.destroy({"id": req.params.Pid}, function(err,data){
       if(err)
         res.send(err);
       else
-        res.send(data);
-    })
+        res.json({"deleted":data[0].firstName});
+    });
+    
   },
 
 
